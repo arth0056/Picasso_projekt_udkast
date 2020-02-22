@@ -69,7 +69,7 @@
             z-index: 1;
             right: 1rem;
             top: 1.7rem;
-            /*            padding-right: 2rem;*/
+            margin-right: 1rem;
 
 
         }
@@ -78,9 +78,11 @@
             visibility: hidden;
         }
 
-        .hide {
+        #filter_desktop {
             visibility: hidden;
         }
+
+
 
         #filter_mobile {}
 
@@ -142,6 +144,7 @@
 
         nav {
             padding-top: 4rem;
+            padding-right: 1rem;
             text-align: right;
             display: flex;
             flex-direction: column;
@@ -289,7 +292,7 @@
 
         }
 
-        /*        media query til desktop*/
+        /*        media query til big shit*/
 
         @media only screen and (min-width: 800px) {
 
@@ -297,21 +300,23 @@
                 font-size: 1.1rem;
             }
 
-            .hidden {
-                visibility: hidden;
+            #filter_desktop {
+                visibility: visible;
+                background-color: transparent;
+                display: flex;
+                flex-direction: row;
+                flex: none;
             }
 
             #burgerknap {
                 visibility: hidden;
             }
 
-            #filter_mobile {
 
-                display: flex;
-                flex-direction: row;
-                flex: none;
 
-            }
+
+
+
 
 
 
@@ -396,6 +401,18 @@
 
         </nav>
 
+        <div id="filter_desktop" class="hidden2">
+
+
+            <button class="filter valgt" data-mus="alle">Alle</button>
+            <button class="filter" data-mus="olga">Olga Khokhlova</button>
+            <button class="filter" data-mus="jacqueline">Jacqueline Roque</button>
+            <button class="filter" data-mus="doramaar">Dora Maar</button>
+            <button class="filter" data-mus="francoise">Francoise Gilot</button>
+            <button class="filter" data-mus="marietherese">Marie-Therese</button>
+
+        </div>
+
     </header>
 
 
@@ -439,10 +456,8 @@
         let filter = "alle";
         document.addEventListener("DOMContentLoaded", startUp);
         const detalje = document.querySelector("#pop_up");
-        //        const container = document.querySelector(".data-container");
-        // const imgTemplate = document.querySelector("template");
-        //
-        // let klon = imgTemplate.cloneNode(true).content;
+
+
 
 
 

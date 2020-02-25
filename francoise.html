@@ -2,27 +2,34 @@
 <html lang="da">
 
 <head>
-
-
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=La+Belle+Aurore|Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Caveat|Raleway&display=swap" rel="stylesheet">
 
     <style>
         body {
             font-family: 'Raleway', sans-serif;
-            overflow-x: hidden;
-            /*            margin: 0;*/
         }
 
-        main_wrapper {
-            position: absolute;
-            top: 7rem;
-            margin: 1rem;
+        #logo {
+            background-image: url(logo/logo.png);
+            background-size: contain;
+            height: 7rem;
+            width: 10rem;
+            cursor: pointer;
+            background-repeat: no-repeat;
+
         }
+
+        .logo_container {
+            display: flex;
+            max-width: 1000px;
+            justify-content: flex-start;
+            margin: 0 auto;
+        }
+
 
         header {
             position: fixed;
@@ -43,23 +50,50 @@
             height: 7rem;
         }
 
-        img {
-            width: 100%;
-            justify-content: center;
-            object-fit: cover;
-            height: 255px;
+
+        p {
+            font-size: 0.8rem;
+            line-height: 1.2rem;
+            padding: 0.4rem;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+
+        }
+
+        a:hover {
+            color: indianred;
+            cursor: pointer;
         }
 
         h1 {
-            text-align: center;
-            margin: 4px;
+            font-family: 'Caveat';
+            font-size: 2rem;
+            margin: 0;
+            padding: .4rem;
+            padding-left: 0;
+
         }
 
-        p {
-            margin: 1rem;
+        #filter_desktop {
+            visibility: hidden;
         }
 
-        /*        burgermenu ting*/
+
+        nav {
+            padding-top: 4rem;
+            padding-right: 1rem;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+        }
+
+
+        /*-----------------------brugermenu----------------------------------*/
 
         #burgerknap {
             background-image: url(burger/burger.svg);
@@ -121,108 +155,113 @@
 
 
 
-        /*        style til listeview*/
 
 
-        #logo {
-            background-image: url(logo/logo_final.svg);
-            background-size: contain;
-            height: 7rem;
+        /*-------------------------------MAIN (scroll)-----------------------*/
+        #scroll {
+            display: none;
+            scroll-snap-type: x mandatory;
+            overflow-x: scroll;
+            width: 90%;
+            margin: auto;
 
-            cursor: pointer;
-            background-repeat: no-repeat;
-
-        }
-
-        .logo_container {
-            display: flex;
             max-width: 1000px;
-            justify-content: flex-start;
+        }
+
+        #scroll_detail img {
+            height: 7rem;
+            scroll-snap-align: center;
+            padding-right: 0.747rem;
+
+            width: 20vw;
+            object-fit: cover;
+            object-position: 40% 25%;
+        }
+
+
+        #container {
             margin: 0 auto;
+            padding: 0.5rem;
+        }
+
+        #detail_tik {
+            margin: 0 auto;
+
         }
 
 
-
-
-        nav {
-            padding-top: 4rem;
-            padding-right: 1rem;
-            text-align: right;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-
-        }
-
-        .valgt {
-            border-bottom: solid 4px rgba(155, 0, 0, 0.65);
-            border-radius: 1%;
-
+        img {
+            width: 100%;
         }
 
         button {
-            font-family: 'Caveat';
-
-            font-size: 1.4rem;
-            margin: 7px;
-            border-radius: 7%;
-            border-style: hidden;
+            font-size: 1rem;
             background-color: transparent;
-            cursor: pointer;
-
+            border-color: transparent;
         }
 
-        .data-container {
-
-            /*            display: flex;*/
-
-
-            display: grid;
-
-            grid-template-columns: repeat(2, 1fr);
-            grid-auto-flow: dense;
-
-            grid-gap: 40px;
-
-            margin: 0 auto;
-            margin-top: 4vw;
-            max-width: 1000px;
+        button:hover {
+            color: indianred;
         }
 
 
+        @media only screen and (min-width: 400px) {
 
-        .tik {}
 
-        footer {
-            position: relative;
-            background-color: indianred;
-            bottom: -.5rem;
-            left: -.5rem;
-            height: 24vh;
-            width: 100vw;
-            margin: 0;
-            margin-top: 2rem;
+
+            .detail_wrap {
+                display: flex;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+
+            .detail_wrap div {
+                width: 50%;
+                padding-right: 1rem;
+            }
+
+
+            .detail_wrap h1 {
+                display: none;
+            }
+
+            h1 {
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+        }
+
+        /*
+        @media only screen and (min-width: 800px) {
+        .detail_wrap div {
+
+        padding-right: 2rem;
+        }
+*/
 
         }
 
 
-        /*        media query KUN til mobile*/
+
+
+
+
+
+
 
         @media only screen and (max-width: 400px) {
 
 
-
-
-            .logo_container {
-                margin: 1vw;
+            .xtra_space {
+                height: 7rem;
             }
 
-            #logo {
-                height: 5.4rem;
-                width: 5.4rem;
-            }
 
-            nav {
+
+
+            #filter_mobile {
 
                 background-color: whitesmoke;
                 position: fixed;
@@ -230,28 +269,38 @@
                 height: 100vh;
                 top: 0;
                 right: 0;
+
             }
 
-            .data-container article:nth-child(2n + 2) {
-                margin-top: 7vw;
-                /*                border: solid indianred 2px;*/
-            }
 
             img {
-                height: 174px;
+                height: 147px;
+                object-position: 50% 0%;
             }
 
-            header {
-                align-items: flex-start;
-            }
 
         }
 
-        /*        media query til tablet*/
+
+
+
 
         @media only screen and (min-width: 400px) {
 
-            nav {
+            .xtra_space {
+                height: 7rem;
+            }
+
+
+
+            #scroll_detail img {
+                height: 7rem;
+                width: 7rem;
+
+            }
+
+
+            #filter_mobile {
 
                 background-color: whitesmoke;
                 position: fixed;
@@ -277,7 +326,7 @@
             }
 
             img {
-                height: 147px;
+
                 object-position: 50% 0%;
             }
 
@@ -298,10 +347,10 @@
 
         @media only screen and (min-width: 800px) {
 
-
             .xtra_space {
-                height: 2rem;
+                height: 0rem;
             }
+
 
             button {
                 font-size: 1.7rem;
@@ -327,7 +376,7 @@
             }
 
 
-
+            #scroll_detail {}
 
 
 
@@ -348,7 +397,8 @@
             }
 
             img {
-                height: 255px;
+                height: auto;
+
             }
 
 
@@ -378,6 +428,8 @@
         }
 
     </style>
+
+
 </head>
 
 <body>
@@ -426,71 +478,68 @@
 
     </header>
 
-
-
     <div class="xtra_space">
 
     </div>
 
-    <div id="main_wrapper">
 
 
 
+    <section id="container">
+        <article id="detail_tik">
+            <!--            <button id="detail_button">Tilbage</button>-->
+            <h1>NAVN</h1>
+            <div class="detail_wrap">
 
-        <div id="outer_container">
-            <section class="data-container"> </section>
-        </div>
+                <div> <img src="" alt=""></div>
+                <div>
 
-        <template>
-            <article class="tik">
-                <img src="" alt="">
-            </article>
-
-        </template>
-
-    </div>
-
-    <footer>
-
-        <p id="footer_txt">
-
-        </p>
+                    <p class="year"></p>
+                    <p class="beskrivelse">WHATEVER</p>
+                    <p class="musetxt">WHATEVER</p>
+                    <p class="copyright"></p>
+                </div>
+            </div>
 
 
-    </footer>
+        </article>
+    </section>
+
+
+    <template id="template_scroll">
+        <article id="scroll_detail" class="each_popup">
+
+            <img id="image_scroll" src="" alt="">
+
+        </article>
+    </template>
+
+
+
+    <div id="scroll"></div>
+
 
 
 
     <script>
+        document.addEventListener("DOMContentLoaded", startUp);
+
+        //        const urlParams = new URLSearchParams(window.location.search);
+        const id = "francoise";
+
         let personer = [];
         const googleData = "https://spreadsheets.google.com/feeds/list/13kjSiYnNHiUNoKXbuB1oO7nbL1k3Zawd7irhZpyQuBQ/od6/public/values?alt=json";
-        let filter = "alle";
-        document.addEventListener("DOMContentLoaded", startUp);
-        const detalje = document.querySelector("#pop_up");
-
-
-
-
-
-
-
-
-        //        starter henter googledata  og sætter eventlistenere på buttons
-
+        const containerScroll = document.querySelector("#scroll");
+        let detaljeScroll = document.querySelector("#container");
 
         function startUp() {
+            console.log("FUCK")
             hentData();
-            knapper();
-
-
+            backKnap();
         }
 
-
-
-        //            henter data fra google sheet, venter på respons før den går til visTing();
-
         async function hentData() {
-
+            console.log("fuck u");
             const response = await fetch(googleData);
             console.log(response);
             personer = await response.json();
@@ -500,16 +549,14 @@
         }
 
 
-        //        tilføjer eventlistener til knapper en ad gangen
-
-        function knapper() {
+        function backKnap() {
             document.querySelector("#burgerknap").addEventListener("click", clickMenu);
-            document.querySelectorAll(".filter").forEach(elm_knap1 => {
-                elm_knap1.addEventListener("click", filtering);
-            })
+            //            document.querySelector("#detail_button").addEventListener("click", goBack)
         }
 
-
+        //        function goBack() {
+        //            history.back();
+        //        }
 
 
         function clickMenu() {
@@ -524,70 +571,53 @@
 
 
 
-
-        function filtering() {
-
-            //            sætter "filter" variablen til den trykkede knaps data-* "value"
-
-            filter = this.dataset.mus;
-
-            //            fjerner ".valgt" style fra forrige knap
-
-            document.querySelectorAll(".filter").forEach(elm => {
-                elm.classList.remove("valgt");
-            })
-
-            //            tilføjer ".valgt" style til den trykkede knap
-
-            this.classList.add("valgt");
-
-            //            kalder visTing() funktionen og printer den trykkede knaps navn i h1
-
-            visTing();
-
-            //            document.querySelector("h1").textContent = this.textContent;
-        }
-
-
-
         function visTing() {
             console.log("VIS ting");
 
-            const container = document.querySelector(".data-container");
-            const imgTemplate = document.querySelector("template");
+            const container = document.querySelector("#container");
+            const muserTemplateScroll = document.querySelector("#template_scroll");
 
-
-            container.innerHTML = "";
 
             personer.feed.entry.forEach(ting => {
 
-                //               mener der skal stå -> if (filter == "alle" || filter == ting.gsx$navn.$t) <- for at filtrere efter spreadsheet kategorien navn
+                if (ting.gsx$kategori.$t == id) {
 
-                if (filter == "alle" || filter == ting.gsx$kategori.$t) {
 
-                    console.log("hej");
-                    let klon = imgTemplate.cloneNode(true).content;
-                    klon.querySelector("img").src = "imgs/" + ting.gsx$billede.$t + ".jpg";
-                    klon.querySelector(".tik").addEventListener("click", () => {
-                        console.log("hva fuck er der nu galt")
-                        location.href = "picasso_test_detail.html?id=" + ting.gsx$id.$t;
-                    })
+                    containerScroll.style.display = "flex";
+                    const klonScroll = muserTemplateScroll.cloneNode(true).content;
+                    klonScroll.querySelector("img").src = "imgs/" + ting.gsx$billede.$t + ".jpg";
+                    detaljeScroll.querySelector("img").src = "imgs/" + ting.gsx$billede.$t + ".jpg";
 
-                    container.appendChild(klon);
+
+
+                    container.querySelector("img").src = "imgs/" + ting.gsx$billede.$t + ".jpg";
+                    container.querySelector("img").alt = "Billede af " + ting.gsx$maleri.$t;
+
+                    container.querySelector("h1").textContent = ting.gsx$maleri.$t;
+                    container.querySelector(".musetxt").textContent = ting.gsx$musetxt.$t;
+                    container.querySelector(".beskrivelse").textContent = ting.gsx$beskrivelse.$t;
+                    container.querySelector(".year").textContent = ting.gsx$year.$t;
+                    container.querySelector(".copyright").textContent = ting.gsx$copyright.$t;
+
+                    klonScroll.querySelector(".each_popup").addEventListener("click", function() {
+
+                        container.querySelector("img").src = "imgs/" + ting.gsx$billede.$t + ".jpg";
+                        container.querySelector("h1").textContent = ting.gsx$maleri.$t;
+                        container.querySelector(".year").textContent = ting.gsx$year.$t;
+                        container.querySelector(".beskrivelse").textContent = ting.gsx$beskrivelse.$t;
+                        //                    visMuseBillede();
+
+                    });
+
+                    containerScroll.appendChild(klonScroll);
+
                 }
-            })
+            });
 
-        }
-
-        function visPopUp(ting) {
-            console.log("fuccckk")
-            klon.querySelector(".tik").addEventListener("click", () => {
-                console.log("hva fuck er der nu galt")
-                location.href = "picasso_test_detail.html?id=" + ting.gsx$id.$t;
-            })
         }
 
     </script>
+
 </body>
 
 </html>

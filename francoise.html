@@ -14,7 +14,7 @@
         }
 
         #logo {
-            background-image: url(logo/logo.png);
+            background-image: url(logo/logo_final.svg);
             background-size: contain;
             height: 7rem;
             width: 10rem;
@@ -52,9 +52,17 @@
 
 
         p {
-            font-size: 0.8rem;
-            line-height: 1.2rem;
+
+            color: #606060;
+
+            font-size: 0.9rem;
+            line-height: 1.5rem;
             padding: 0.4rem;
+        }
+
+        .img p {
+            font-size: .6rem;
+            color: #9f9f9f;
         }
 
         a {
@@ -119,7 +127,14 @@
 
 
 
-        #filter_mobile {}
+        #filter_mobile {
+            background-color: whitesmoke;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            right: 0;
+        }
 
         .open {
             animation-name: open_kf;
@@ -195,7 +210,8 @@
         }
 
         button {
-            font-size: 1rem;
+            font-family: 'Caveat';
+            font-size: 1.7rem;
             background-color: transparent;
             border-color: transparent;
         }
@@ -337,7 +353,7 @@
 
             .data-container article:nth-child(3n + 2) {
                 margin-top: 4vw;
-                /*                border: solid orangered 2px;*/
+
             }
 
 
@@ -398,6 +414,7 @@
 
             img {
                 height: auto;
+                width: 80%;
 
             }
 
@@ -455,24 +472,24 @@
         <nav id="filter_mobile" class="hidden">
 
 
-            <button class="filter valgt" data-mus="alle">Galleri</button>
-            <button class="filter" data-mus="olga"> <a href="olga.html"> Olga </a></button>
-            <button class="filter" data-mus="jacqueline">Jacqueline</button>
-            <button class="filter" data-mus="doramaar">Dora</button>
+            <button class="filter valgt" data-mus="alle"> <a href="picasso_test.html"> Galleri</a> </button>
+            <button class="filter" data-mus="olga"><a href="olga.html">Olga</a></button>
+            <button class="filter" data-mus="jacqueline"><a href="jacqueline.html">Jacqueline</a></button>
+            <button class="filter" data-mus="doramaar"><a href="dora.html"> Dora </a></button>
             <button class="filter" data-mus="francoise"><a href="francoise.html"> Francoise </a></button>
-            <button class="filter" data-mus="marietherese">Marie-Therese</button>
+            <button class="filter" data-mus="marietherese"><a href="marietherese.html">Marie-Therese</a></button>
 
         </nav>
 
         <div id="filter_desktop" class="hidden2">
 
 
-            <button class="filter valgt" data-mus="alle">Galleri</button>
-            <button class="filter" data-mus="olga"><a href="olga.html"> Olga </a></button>
-            <button class="filter" data-mus="jacqueline">Jacqueline</button>
-            <button class="filter" data-mus="doramaar">Dora</button>
+            <button class="filter valgt" data-mus="alle"> <a href="picasso_test.html"> Galleri</a> </button>
+            <button class="filter" data-mus="olga"><a href="olga.html">Olga</a></button>
+            <button class="filter" data-mus="jacqueline"><a href="jacqueline.html">Jacqueline</a></button>
+            <button class="filter" data-mus="doramaar"><a href="dora.html"> Dora </a></button>
             <button class="filter" data-mus="francoise"><a href="francoise.html"> Francoise </a></button>
-            <button class="filter" data-mus="marietherese">Marie-Therese</button>
+            <button class="filter" data-mus="marietherese"><a href="marietherese.html">Marie-Therese</a></button>
 
         </div>
 

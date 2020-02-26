@@ -12,6 +12,10 @@
     <link href="https://fonts.googleapis.com/css?family=Caveat|Raleway&display=swap" rel="stylesheet">
 
     <style>
+        img {
+            width: 100%;
+        }
+
         body {
             font-family: 'Raleway', sans-serif;
             overflow-x: hidden;
@@ -23,6 +27,18 @@
             top: 7rem;
             margin: 1rem;
         }
+
+
+        #popup h1 {
+            font-family: 'caveat';
+
+        }
+
+        #popup button {
+            font-family: sans-serif;
+        }
+
+
 
         /*--------------------header-------------------------*/
 
@@ -45,7 +61,59 @@
             height: 7rem;
         }
 
-        img {
+
+        #logo {
+            background-image: url(logo/logo_final.svg);
+            background-size: contain;
+            height: 7rem;
+
+            cursor: pointer;
+            background-repeat: no-repeat;
+
+        }
+
+        .logo_container {
+            display: flex;
+            max-width: 1000px;
+            justify-content: flex-start;
+            margin: 0 auto;
+        }
+
+
+
+
+        nav {
+            padding-top: 4rem;
+            padding-right: 1rem;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+        }
+
+        .valgt {
+            border-bottom: solid 4px rgba(155, 0, 0, 0.65);
+            border-radius: 1%;
+
+        }
+
+        button {
+            font-family: 'Caveat';
+
+            font-size: 1.4rem;
+            margin: 7px;
+            border-radius: 7%;
+            border-style: hidden;
+            background-color: transparent;
+            cursor: pointer;
+
+        }
+
+
+        /*------------------header slut---------------*/
+
+        #main_wrapper img {
             width: 100%;
             justify-content: center;
             object-fit: cover;
@@ -58,10 +126,11 @@
         }
 
         p {
-            margin: 1rem;
+
+            color: #606060;
         }
 
-        /*--------------burgermenu ting-----------*/
+        /*--------------burgermenu start-----------*/
 
         #burgerknap {
             background-image: url(burger/burger.svg);
@@ -123,56 +192,10 @@
 
 
 
-        /*        style til listeview*/
-
-
-        #logo {
-            background-image: url(logo/logo_final.svg);
-            background-size: contain;
-            height: 7rem;
-
-            cursor: pointer;
-            background-repeat: no-repeat;
-
-        }
-
-        .logo_container {
-            display: flex;
-            max-width: 1000px;
-            justify-content: flex-start;
-            margin: 0 auto;
-        }
+        /*-----------------------burgermenu slut----------------------*/
 
 
 
-
-        nav {
-            padding-top: 4rem;
-            padding-right: 1rem;
-            text-align: right;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-
-        }
-
-        .valgt {
-            border-bottom: solid 4px rgba(155, 0, 0, 0.65);
-            border-radius: 1%;
-
-        }
-
-        button {
-            font-family: 'Caveat';
-
-            font-size: 1.4rem;
-            margin: 7px;
-            border-radius: 7%;
-            border-style: hidden;
-            background-color: transparent;
-            cursor: pointer;
-
-        }
 
         .data-container {
 
@@ -208,7 +231,78 @@
         }
 
 
-        /*        media query KUN til mobile*/
+
+
+
+
+
+
+        /*------------popup start------------------*/
+
+
+        #popup {
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            color: #000000;
+            font-size: 1rem;
+            background-color: rgba(0, 0, 0, 0.47);
+            overflow: scroll;
+
+            z-index: 1;
+
+        }
+
+        #popup h1 {
+            font-size: 1.7rem;
+            text-align: left;
+        }
+
+
+
+        .skjul {
+            visibility: hidden;
+        }
+
+
+        #popup button {
+            font-size: 1rem;
+            z-index: 2;
+            color: black;
+            background-color: transparent;
+            position: fixed;
+            right: .2rem;
+            top: 1.5rem;
+            border-style: none;
+            cursor: pointer;
+        }
+
+        #eachMuse_popup {
+
+            pointer-events: none;
+
+
+            margin: .5rem;
+            padding: .5rem;
+
+            position: fixed;
+            top: 1rem;
+            background-color: white;
+
+            width: 95vw;
+            margin: 0 auto;
+        }
+
+        #eachMuse_popup h1 {}
+
+
+        /*        popup slut*/
+
+
+
+
+        /*----------------media query KUN til mobile-------------------------*/
 
         @media only screen and (max-width: 400px) {
 
@@ -236,10 +330,10 @@
 
             .data-container article:nth-child(2n + 2) {
                 margin-top: 7vw;
-                /*                border: solid indianred 2px;*/
+
             }
 
-            img {
+            #main_wrapper img {
                 height: 174px;
             }
 
@@ -249,9 +343,26 @@
 
         }
 
-        /*        media query til tablet*/
+        /*---------------------------media query til tablet----------------------------*/
 
         @media only screen and (min-width: 400px) {
+
+
+
+            #eachMuse_popup {
+                width: 60vw;
+
+            }
+
+            #popup {
+                display: flex;
+                justify-content: center;
+            }
+
+            #popup button {
+                right: 20vw;
+
+            }
 
             nav {
 
@@ -278,7 +389,7 @@
 
             }
 
-            img {
+            #main_wrapper img {
                 height: 147px;
                 object-position: 50% 0%;
             }
@@ -290,15 +401,37 @@
 
             .data-container article:nth-child(3n + 2) {
                 margin-top: 4vw;
-                /*                border: solid orangered 2px;*/
+
             }
 
 
         }
 
-        /*        media query til big shit*/
+        /*--------------------media query til big shit---------------------------*/
+
+
 
         @media only screen and (min-width: 800px) {
+
+
+
+            #eachMuse_popup {
+                width: 24vw;
+
+                flex-direction: column;
+
+
+
+
+            }
+
+            #eachMuse_popup img {}
+
+            #popup button {
+                right: 36vw;
+            }
+
+            /*^^^^^^^^^^^^^^^^^^   POPUP^^^^^^^^*/
 
 
             .xtra_space {
@@ -330,16 +463,12 @@
 
 
 
-
-
-
             .logo-container {
 
                 width: 1000px;
                 margin: 0 auto;
 
             }
-
 
 
             nav {
@@ -349,10 +478,9 @@
 
             }
 
-            img {
+            #main_wrapper img {
                 height: 255px;
             }
-
 
 
             .data-container article:nth-child(3n + 2) {
@@ -434,6 +562,20 @@
 
     </div>
 
+
+    <section id="popup" class="skjul">
+        <button>X</button>
+        <article id="eachMuse_popup">
+            <h1></h1>
+
+            <img src="">
+
+            <p></p>
+
+
+        </article>
+    </section>
+
     <div id="main_wrapper">
 
 
@@ -468,7 +610,7 @@
         const googleData = "https://spreadsheets.google.com/feeds/list/13kjSiYnNHiUNoKXbuB1oO7nbL1k3Zawd7irhZpyQuBQ/od6/public/values?alt=json";
         let filter = "alle";
         document.addEventListener("DOMContentLoaded", startUp);
-        const detalje = document.querySelector("#pop_up");
+        const detalje_popup = document.querySelector("#popup");
 
 
 
@@ -570,11 +712,15 @@
                 if (filter == "alle" || filter == ting.gsx$kategori.$t) {
 
                     console.log("hej");
+
                     let klon = imgTemplate.cloneNode(true).content;
+
+
                     klon.querySelector("img").src = "imgs/" + ting.gsx$billede.$t + ".jpg";
+
                     klon.querySelector(".tik").addEventListener("click", () => {
                         console.log("hva fuck er der nu galt")
-                        location.href = "picasso_test_detail.html?id=" + ting.gsx$id.$t;
+                        visPopUp(ting);
                     })
 
                     container.appendChild(klon);
@@ -584,11 +730,33 @@
         }
 
         function visPopUp(ting) {
-            console.log("fuccckk")
-            klon.querySelector(".tik").addEventListener("click", () => {
-                console.log("hva fuck er der nu galt")
-                location.href = "picasso_test_detail.html?id=" + ting.gsx$id.$t;
-            })
+
+
+            console.log("que pasa amigo");
+
+
+
+            detalje_popup.classList.remove("skjul");
+            detalje_popup.querySelector("button").addEventListener("click", () => detalje_popup.classList.add("skjul"));
+            detalje_popup.querySelector("h1").textContent = ting.gsx$maleri.$t;
+            detalje_popup.querySelector("p").textContent = ting.gsx$year.$t;
+            detalje_popup.querySelector("img").src = "imgs/" + ting.gsx$billede.$t + ".jpg";
+
+
+
+
+
+
+
+
+            //            console.log("fuccckk")
+            // klon.querySelector(".tik").addEventListener("click", () => {
+            // console.log("hva fuck er der nu galt")
+            // location.href = "picasso_test_detail.html?id=" + ting.gsx$id.$t;
+            // })
+            //
+
+
         }
 
     </script>
